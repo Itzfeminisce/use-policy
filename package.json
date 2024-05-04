@@ -1,0 +1,31 @@
+{
+  "name": "use-policy",
+  "version": "1.0.0",
+  "description": "An express + mongoose compactible policy initializer",
+  "main": "./dist/index.js",
+  "author": "itzfeminisce",
+  "license": "MIT",
+  "private": true,
+  "types":"@types",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "ts-watch --onSuccess \"node ./dist/index.js\"",
+    "start:example": "nodemon ./dist/example/app.js"
+  },
+  "keywords": [
+    "use-policy",
+    "express-policy",
+    "mongoose-policy",
+    "policy"
+  ],
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.12.8",
+    "nodemon": "^3.1.0",
+    "ts-watch": "^1.0.8",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
