@@ -3,9 +3,9 @@
   "version": "1.0.1",
   "description": "An express + mongoose compactible policy initializer",
   "main": "./dist/index.js",
-  "author": "itzfeminisce",
+  "author": "Rotimi Oluwafemi Solomon (Itzfeminisce)",
   "license": "MIT",
-  "types":"@types",
+  "types": "@types",
   "repository": "Itzfeminisce/use-policy",
   "homepage": "https://github.com/Itzfeminisce/use-policy",
   "scripts": {
@@ -22,7 +22,7 @@
     "mongoose-permission",
     "express-permission",
     "express-mongoose-permission",
-    "express-mongoose-policy
+    "express-mongoose-policy"
   ],
   "devDependencies": {
     "@types/express": "^4.17.21",
