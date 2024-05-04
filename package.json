@@ -1,6 +1,6 @@
 {
   "name": "use-policy",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "An express + mongoose compactible policy initializer",
   "main": "./dist/index.js",
   "author": "Rotimi Oluwafemi Solomon (Itzfeminisce)",
