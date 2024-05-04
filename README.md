@@ -244,3 +244,62 @@ usePolicy({
 })
 
 ```
+
+## For cjs Usage.
+
+```
+const express = require("express")
+const usePolicy = require("use-policy")
+const path = require("path")
+
+
+const app = express()
+
+app.get("/",
+
+  /**
+  * Authenticate User and populate req.user
+  **/
+  (req, __, next)=> {
+    
+    req.user = {
+      id: 500
+    }
+    next()
+  },
+
+
+  * Apply middleware *
+  
+  usePolicy.default({
+    
+    policiesDir: path.resolve(__dirname, "policies")
+  }),
+
+
+  /***
+  * Apply policy
+  **/
+  async (req, res, next)=> {
+    try {
+
+     // await req.user.permissions.can("delete_user", undefined, "Only user with ID 500 can delete User")
+
+
+      await req.user.permissions.can("test_policy")
+
+      //await req.user.permissions.can("test_policy_2")
+
+      // If all policies passes
+      res.json("OK")
+
+    }catch(err) {
+      console.log("ERR_PERMISSION", err.message)
+      res.send(err.message)
+    }
+  }
+)
+
+
+app.listen(3000, ()=>console.log("Serving at 3000"))
+```
