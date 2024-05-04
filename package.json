@@ -1,11 +1,11 @@
 {
   "name": "use-policy",
-  "version": "1.0.1",
+  "version": "1.0.10",
   "description": "An express + mongoose compactible policy initializer",
   "main": "./dist/index.js",
   "author": "Rotimi Oluwafemi Solomon (Itzfeminisce)",
   "license": "MIT",
-  "types": "@types",
+  "types": "./src/@types",
   "repository": "Itzfeminisce/use-policy",
   "homepage": "https://github.com/Itzfeminisce/use-policy",
   "scripts": {

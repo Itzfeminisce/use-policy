@@ -71,7 +71,7 @@ class Policy {
 
   async loadModels(dir?: string): Promise<Map<string, any>> {
     const instances = new Map<string, any>();
-    if (!dir) return;
+    if (!dir) return instances;
 
     try {
       const files = await readdir(dir);
