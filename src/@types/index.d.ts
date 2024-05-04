@@ -18,7 +18,7 @@ interface BaseMethod {
  
   
   when(
-    condition: true,
+    condition: boolean | ()=>boolean,
     callback: () => void,
     options?: Pick<PolicyConfigOptions, "throwOnPermissionError">,
     errorMessage?: string

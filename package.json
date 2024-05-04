@@ -1,22 +1,28 @@
 {
   "name": "use-policy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An express + mongoose compactible policy initializer",
   "main": "./dist/index.js",
   "author": "itzfeminisce",
   "license": "MIT",
-  "private": true,
   "types":"@types",
+  "repository": "Itzfeminisce/use-policy",
+  "homepage": "https://github.com/Itzfeminisce/use-policy",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:dev": "ts-watch --onSuccess \"node ./dist/index.js\"",
     "start:example": "nodemon ./dist/example/app.js"
   },
   "keywords": [
+    "policy",
+    "permission",
     "use-policy",
     "express-policy",
     "mongoose-policy",
-    "policy"
+    "mongoose-permission",
+    "express-permission",
+    "express-mongoose-permission",
+    "express-mongoose-policy
   ],
   "devDependencies": {
     "@types/express": "^4.17.21",

@@ -226,12 +226,6 @@ usePolicy({
   modelDir?: string,
   
   
-  
-  * If `false`, will return the boolean response instead to throwing on permission error
-  
-  throwOnPermissionError?: boolean,
-  
-  
   * Whatever we would like to have our policy files to end with.
   * We have defaulted to `Policy`. 
   * You can override it by passing a string. Uppercase first.
