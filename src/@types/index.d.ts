@@ -1,4 +1,11 @@
-//declare module "use-policy" {
+
+interface Permissive {
+  permitIf:()=>Promise<any>
+}
+
+interface IPermitHandler {
+  register: any
+}
 
   /**
   * Represents a base method with permission-related functionalities.
@@ -60,7 +67,7 @@
     * The directory where models are located.
     * Optional.
     */
-    modelDir?: string;
+    modelsDir?: string;
 
     /**
     * The suffix used for policy files.
@@ -86,7 +93,7 @@
   * Represents an express interface for policy request.
   */
   type PolicyRequest = express.Request;
-
+type Permit = "permitIf"|"permitWhen"|"permitUnless"|"permitUntil";
 
   declare module "express-serve-static-core" {
     /**
@@ -96,7 +103,7 @@
       /**
       * User object representing permissions.
       */
-      user?: {
+      user?: Permissive & {
         /**
         * Permission object.
         */

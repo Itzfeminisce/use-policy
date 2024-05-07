@@ -8,15 +8,15 @@ import defaultPolicyConfigs from "./default"
 class Permission < U > implements BaseMethod {
 
   constructor(
-    private request: PolicyRequest,
-    private response: Response,
-    private next: NextFunction,
-    private models: ModelMap < U >,
-    private options: PolicyConfigOptions,
-    private policySet: Set < Object >
+    protected request: PolicyRequest,
+    protected response: Response,
+    protected next: NextFunction,
+    protected models: ModelMap < U >,
+    protected options: PolicyConfigOptions,
+    protected policySet: Set < Object >
   ) {}
 
-  private throwOnPermissionError(
+  protected throwOnPermissionError(
     isPermitted: boolean,
     options?: Pick < PolicyConfigOptions, "throwOnPermissionError" >,
     errorMessage?: string

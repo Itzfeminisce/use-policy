@@ -1,11 +1,17 @@
 import path from "path"
 
-const defaultPolicyConfigs: PolicyConfigOptions = {
+export const config: PolicyConfigOptions = {
   policiesDir: path.resolve(__dirname, "policies"),
-  modelDir: path.resolve(__dirname, "models"),
+  modelsDir: path.resolve(__dirname, "models"),
   suffix: "Policy",
   throwOnPermissionError: true,
 };
 
+// Register all defined permission handlers
+export const handlerSet: IPermitHandler = new Set<IPermitHandler>()
 
-export default defaultPolicyConfigs
+
+
+export const dependencyMap = new Map<"policies"|"models", any>()
+
+

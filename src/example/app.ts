@@ -35,6 +35,9 @@ app.get("/",
   async (req: any, res: any, next: any)=> {
     try {
 
+//await req.user.permitIf("email_is_verified")
+
+
       await req.user.permissions.can("delete_user", undefined, "Only user with ID 500 can delete User")
 
 
